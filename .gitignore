@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+
+# SQLite
+database.db
+
+# VSCode
+.vscode/
+
+# Logs
+logs/
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+server.pid
+
+# Build output
+dist/
+build/

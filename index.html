@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+<title>Kalendar</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Annual seasonal calendar"/>
+  <meta name="keywords" content="Kalendar, Calendar"/>
+  <link rel="shortcut icon" href="pic/calendar.png"/>
+  <link rel="stylesheet" href="css.css" type="text/css">
+  <!-- <script src="tests/mocha3.2.0.js"></script> -->
+  <!-- <script src="tests/chai3.5.0.js"></script> -->
+  <script src="js.js" defer></script>
+  <!-- <script src="tests/tests.js" defer></script> -->
+</head><body>
+<div id="cover">
+
+    <img src="pic/menu.png" alt="menu" id="imgMenu">
+
+    <aside>
+
+        <h1>Kalendar</h1>
+        <div id="displayDate"></div>
+
+        <nav id="menu">
+            <label class="menuLabel">
+                <input type="checkbox" id="colored" checked />
+                <img src="pic/color.png" class="picMarker" alt="•" />
+                <span>Colors</span>
+            </label>
+            <label class="menuLabel">
+                <input type="checkbox" id="nums" checked />
+                <img src="pic/number.png" class="picMarker" alt="•" />
+                <span>Numbers</span>
+            </label>
+            <label class="menuLabel">
+                <input type="checkbox" id="season" checked />
+                <img src="pic/blocks.png" class="picMarker2" alt="•" />
+                <span>Seasons</span>
+            </label>
+            <label class="menuLabel">
+                <img src="pic/calendar-blue.png" class="picMarker2" alt="•" />
+                <span>Weeks start:&nbsp;</span>
+                <select id="menuFDay" name="menuFDay">
+                    <option value="Mon">Mon</option>
+                    <option value="Sun">Sun</option>
+                </select>
+            </label>
+            <label class="menuLabel">
+                <img src="pic/printer.png" class="picMarker" alt="•" />
+                <span id="btnPrint">Print</span>
+            </label>
+            <label id="btnSettings" class="menuLabel">
+                <img src="pic/gear.png" class="picMarker" alt="•" />
+                <span>Settings</span>
+            </label>
+        </nav>
+ 
+        <div id="loginField">
+            <div id="loginLine">
+                <span>Login:</span>
+                <input name="login" type="text"/>
+            </div>
+            <div id="passwLine">
+                <span>Password:</span>
+                <input name="passw" type="password"/>
+            </div>
+            <input type="button" value="Log in" class="btn green" id="loginButton" />
+            <input type="button" value="Register" class="btn" id="regButton" />
+        </div>
+
+        <div id="exitBtnField">
+            <img src="pic/out.png" class="picMarker" alt="•" />
+            <span id="exitBtn">Log out</span>
+        </div>
+
+    </aside>
+
+    <main></main>
+
+    <div id="eventSpace">
+        <div id="eventWindow">
+            <h1>Event</h1>
+            <div id="eventDate"></div>
+            <textarea id="eventContent" name="eventContent"></textarea>
+            <div id="notice">Up to 500 symbols</div>
+            <label class="centering">
+                <span>Day color:</span>
+                <input type="color" value="#CDEDFF" id="eventColor" />
+            </label>
+            <div id="eventWindowButtons" class="centering">
+                <button id="eventWinSaveBtn" class="btn green">Save</button>
+                <button id="eventWinCancelBtn" class="btn red">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- cover -->
+
+<div id="regWindow" class="infoWindow">
+    <h1>Registration</h1>
+    <div class="fieldName">Email</div>
+    <input name="email" type="email" minlength="6" maxlength="200" required />
+    <div id="emailError" class="errorField"></div>
+    <div class="fieldName">Login</div>
+    <input name="login" type="text" minlength="3" maxlength="50" required />
+    <div id="loginError" class="errorField"></div>
+    <div class="fieldName">Password</div>
+    <div id="passwField">
+        <input name="passw" type="password" minlength="4" maxlength="100" required />
+        <div><img src="pic/eye-closed.png" alt="O" title="Show/Hide" class="picEye" id="passSwitch"></div>
+    </div>
+    <div id="passwError" class="errorField"></div>
+    <div class="messageWindowButtons">
+        <input type="button" value="Register" class="btn green" id="regWindowRegisterButton" />
+        <input type="button" value="Cancel" class="btn red" id="regWindowCancelButton" />
+    </div>
+</div>
+
+<div id="messageWindow" class="infoWindow">
+    <h1>Info</h1>
+    <div id="messageWindowContent"></div>
+    <div class="messageWindowButtons">
+        <button id="messageWindowBtn" class="btn">Ok</button>
+    </div>
+</div>
+
+<div id="wrongPasswWindow" class="infoWindow">
+    <h1>Logging error</h1>
+    <div id="subtitle">The password is wrong</div>
+    <div class="messageWindowButtons">
+        <button id="wrPassWinOkBtn" class="btn">Ok</button>
+    </div>
+    <div id="forgot">I forgot my password</div>
+</div>
+
+<div id="sendPasswWindow" class="infoWindow">
+    <h1>Restore credentials</h1>
+    <div id="sendPassWinAlert">Enter the email of the account.</br>We'll help you to restore your password.</div>
+    <input name="email" type="email" minlength="6" maxlength="200" />
+    <div id="sendPassWinEmailError" class="errorField"></div>
+    <div class="messageWindowButtons">
+        <button id="sendPassWinSendBtn" class="btn green">Send</button>
+        <button id="sendPassWinCancelBtn" class="btn red">Cancel</button>
+    </div>
+</div>
+
+<div id="settingsWindow">
+    <h1>Settings</h1>
+    <div>Colors: <input type="checkbox" id="swColors" /></div>
+    <div>Numbers: <input type="checkbox" id="swNumbers" /></div>
+    <div>Seasons: <input type="checkbox" id="swSeasons" /></div>
+    <div>First day of the week:
+        <select id="swFDay" name="swFDay">
+            <option value="Mon">Mon</option>
+            <option value="Sun">Sun</option>
+        </select>
+    </div>
+    <div><span id="passwSwitch">Change my password</span> &nbsp; <input id="passwInput"></div>
+    <div class="messageWindowButtons">
+        <button id="setWinSaveBtn" class="btn green">Save</button>
+        <button id="setWinCancelBtn" class="btn red">Cancel</button>
+    </div>
+</div>
+
+<!-- Close the programm -->
+ <img src="pic/cross.png" alt="X" id="shutdownButton">
+
+</body>
+</html>

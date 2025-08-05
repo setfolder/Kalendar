@@ -1,0 +1,16 @@
+{
+    "name": "kalendar",
+    "version": "1.0.0",
+    "description": "A calendar with events",
+    "author": "Serhii Voznytsia <jsprog@proton.me>",
+    "license": "MIT",
+    "main": "server.js",
+    "scripts": {
+        "start": "npm run",
+        "test": ""
+    },
+    "dependencies": {
+        "express": "^5.1.0",
+        "sqlite3": "^5.1.7"
+    }
+}
