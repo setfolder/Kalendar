@@ -23,6 +23,12 @@
 - Use as a website: install on server.
 - Use as an application: just launch it. The application is portable: copy/move the folder with the application to another location.
 
+## Installed example
+
+https://kalendar-crk8.onrender.com
+
+[Kalendar ↗](https://kalendar-crk8.onrender.com)
+
 ## Installation
 
 Requires Node.js and a browser.
@@ -40,12 +46,10 @@ Requires Node.js and a browser.
 - To use events, register as a new user and log in with your username and password.
 - To log out of your account, use the "Log out" button in the lower left corner.
 
-
 ## Launch as Website
 
 - Install on any hosting with Node.js support.
 - In the browser, go to the website address, port 3000. For example, https://kalendar.net:3000
-
 
 ## Launch as Program
 
@@ -60,11 +64,9 @@ Requires Node.js and a browser.
 - Close the app using the **X** in the upper-right corner.
 - To use a specific browser: open it before running the script.
 
-
 ## Automatic Testing
 
 To enable tests, uncomment lines like <!-- <script src="tests/....></script> --> in the `<head>` section of `index.html`:
-
 
 ## Copyright
 
