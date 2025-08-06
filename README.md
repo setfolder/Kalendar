@@ -25,8 +25,6 @@
 
 ## Installed example
 
-https://kalendar-crk8.onrender.com
-
 [Kalendar ↗](https://kalendar-crk8.onrender.com)
 
 ## Installation
